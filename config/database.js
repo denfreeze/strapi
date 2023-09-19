@@ -1,13 +1,10 @@
 module.exports = ({ env }) => ({
   connection: {
-    client: 'postgres',
+    client: 'sqlite',
     connection: {
-      host: env('PGHOST', '127.0.0.1'),
-      port: env.int('PGPORT', 5432),
-      database: env('PGDATABASE', 'postgres'),
-      user: env('PGUSER', 'postgres'),
-      password: env('PGPASSWORD', 'postgres'),
-      ssl: env.bool(true),
+      filename: env('DATABASE_FILENAME', '/data/.sqlite3/data.db'),
     },
+    useNullAsDefault: true,
+    debug: false,
   },
 });
