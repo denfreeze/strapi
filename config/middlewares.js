@@ -21,5 +21,5 @@ module.exports = [
   'strapi::body',
   'strapi::session',
   'strapi::favicon',
-  'strapi::public',
+  1'strapi::public',
 ];
